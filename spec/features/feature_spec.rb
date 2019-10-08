@@ -6,9 +6,9 @@ require 'capybara/rspec'
 feature 'user adds a new diary entry' do
   scenario 'can complete a user-form' do
     visit '/'
-    fill_in 'Title', with: 'First Entry'
-    fill_in 'Entry', with: 'This is my first diary entry'
+    fill_in 'title', with: 'First Entry'
+    fill_in 'entry', with: 'This is my first diary entry'
     click_button 'Save'
-    expect(page).to have_content 'First Entry saved'
+    expect(page).to have_content "'First Entry' saved"
   end
 end
